@@ -5,4 +5,5 @@
     <string name="cd_homeTeam">Bandeira time da casa</string>
     <string name="txtVersus">X</string>
     <string name="cd_BandeiraTimeVisitante">Bandeira do time visitante</string>
+    <string name="error_api">Erro INTERNO</string>
 </resources>
