@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "545671558067",
+    "project_id": "simulador-dio",
+    "storage_bucket": "simulador-dio.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:545671558067:android:2a914d72012e1dbb4b91c6",
+        "android_client_info": {
+          "package_name": "me.dio.simulator.islandex"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "545671558067-6506tuao5cv8fjkcua237inrnkckr0td.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpLDb02KqHca1Ulbpnn600Us9Ct7x7sVA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "545671558067-6506tuao5cv8fjkcua237inrnkckr0td.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

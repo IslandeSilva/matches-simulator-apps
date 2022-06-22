@@ -3,16 +3,12 @@ package me.dio.simulator.islandex.ui;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.ViewPropertyAnimator;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import com.google.android.material.snackbar.Snackbar;
-
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
@@ -31,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
     private MatchesAPI MatchesAPI;
-    private MatchesAdapter matchesAdapter;
+    private MatchesAdapter matchesAdapter = new MatchesAdapter(Collections.emptyList());
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -57,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupFloatingActionButton() {
         binding.fabSimulate.setOnClickListener(view -> {
+
             view.animate().rotationBy(360).setDuration(500).setListener(new AnimatorListenerAdapter() {
                 @Override
                 public void onAnimationEnd(Animator animation) {
@@ -69,6 +66,9 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
             });
+
+          //  throw  new RuntimeException("Teste Crashlytics"); // Simular Erro no Botão
+
         });
     }
 
@@ -79,6 +79,8 @@ public class MainActivity extends AppCompatActivity {
     private void setupMatcheslist() {
         binding.rvMatches.setHasFixedSize(true);
         binding.rvMatches.setLayoutManager(new LinearLayoutManager(this));
+        matchesAdapter = new MatchesAdapter(Collections.emptyList());
+        binding.rvMatches.setAdapter(matchesAdapter);
         findMatchesFromAPI();
     }
 
